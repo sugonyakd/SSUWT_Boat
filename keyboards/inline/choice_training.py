@@ -22,20 +22,3 @@ choice = InlineKeyboardMarkup(
         ],
     ]
 )
-
-contacts_GTF = InlineKeyboardMarkup(
-    inline_keyboard=[
-        [
-          #,  InlineKeyboardButton(text="Телефон деканата ГТФ"), url=PHONE_NUMBER_GTF),
-        ],
-        {
-            InlineKeyboardButton(text="Электронная почта"),  # , url=EMAIL_GTF),
-        },
-        [
-            InlineKeyboardButton(text="Показать на карте"),
-        ],
-        [
-            InlineKeyboardButton(text='Выход', callback_data='cancel'),
-        ]
-    ],
-)

@@ -7,8 +7,7 @@ from loader import dp
 # Эхо хендлер, куда летят текстовые сообщения без указанного состояния
 @dp.message_handler(state=None)  # декоратор
 async def bot_echo(message: types.Message):
-    await message.answer(f"Эхо без состояния."
-                         f"Сообщение:\n"
+    await message.answer(f"К сожалению, я пока что не знаю такой комманды \n"               
                          f"{message.text}")
 
 
