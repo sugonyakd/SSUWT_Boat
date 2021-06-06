@@ -9,4 +9,4 @@ ADMINS = env.list("ADMINS")  # Тут у нас будет список из а�
 IP = env.str("ip")  # Тоже str, но для айпи адреса хоста
 PHONE_NUMBER_GTF = env.str("PHONE_NUMBER_GTF")
 EMAIL_GTF = env.str("EMAIL_GTF")
-MAP = env.list("MAP")
+MAP = env.str("MAP")

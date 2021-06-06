@@ -1,8 +1,7 @@
 import logging
 
 from aiogram.dispatcher.filters import Text
-from aiogram.types import Message, CallbackQuery, InlineKeyboardMarkup, \
-    InlineKeyboardButton
+from aiogram.types import Message, CallbackQuery, InlineKeyboardMarkup, InlineKeyboardButton, venue
 
 from data.config import PHONE_NUMBER_GTF
 from keyboards.inline.choice_training import choice, contacts_GTF
@@ -25,19 +24,17 @@ async def hydraulic(call: CallbackQuery):
         "На факультете <b>ГТФ</b> ведется подготовка бакалавров техники и технологии по следующим направлениям и профилям:\n"
         '• Строительство\n''• Техносферная безопасность\n''• Природообустройство и водопользование\n'
         "А также специалистов в направлении <b>Пожарной безопасности</b>.\n"
-        "Выпускники факультета сегодня работают во всех бассейнах +79954990435 внутренних водных путей "
+        "Выпускники факультета сегодня работают во всех бассейнах внутренних водных путей "
         "России, в строительных и проектных организациях, в структурах МЧС и пожарной безопасности.",
         reply_markup=InlineKeyboardMarkup(
             inline_keyboard=[
-                    [InlineKeyboardButton(text="+79954990435", url="https://ya.com")],
-                    [InlineKeyboardButton(text="Электронная почта",
-                                          url="https://mail.google.com/gtf@nsawt.ru")],
-                    [InlineKeyboardButton(text="Показать на карте",
-                                          venue=("55.029486893037024", "82.91459704564168",
-                                                 "Главный корпус", "ул. Щетинкина, 33, "
-                                                                   "Новосибирск, Новосибирская обл."))],
-                    [InlineKeyboardButton(text='Выход', callback_data='cancel'), ],
-                ],
+                [InlineKeyboardButton(text="Позвонить", url="http://onmap.uz/tel/73832111191")],
+                [InlineKeyboardButton(text="Электронная почта",
+                                      url="https://mail.google.com/gtf@nsawt.ru")],
+                [InlineKeyboardButton(text="Показать на карте",
+                                      url="https://www.google.ru/maps/place/%D0%A1%D0%B8%D0%B1%D0%B8%D1%80%D1%81%D0%BA%D0%B8%D0%B9+%D0%B3%D0%BE%D1%81%D1%83%D0%B4%D0%B0%D1%80%D1%81%D1%82%D0%B2%D0%B5%D0%BD%D0%BD%D1%8B%D0%B9+%D1%83%D0%BD%D0%B8%D0%B2%D0%B5%D1%80%D1%81%D0%B8%D1%82%D0%B5%D1%82+%D0%B2%D0%BE%D0%B4%D0%BD%D0%BE%D0%B3%D0%BE+%D1%82%D1%80%D0%B0%D0%BD%D1%81%D0%BF%D0%BE%D1%80%D1%82%D0%B0/@55.0283951,82.9125063,17z/data=!3m1!4b1!4m5!3m4!1s0x42dfe5d24af4351b:0xdf828793aa57afaa!8m2!3d55.028392!4d82.914695?hl=ru&authuser=0")],
+                [InlineKeyboardButton(text='Выход', callback_data='cancel'), ],
+            ],
         ),
     )
 
